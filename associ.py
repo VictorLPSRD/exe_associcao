@@ -44,7 +44,7 @@ print(escritor.ferramenta.escrever())
 # Exiba o nome do carro, motor e fabricante na tela
 
 class Carro:
-    def __init__(self,nome):
+    def __init__(self,nome):#1
         self.nome = nome
         self._motor = None
         self._fabrica = None
@@ -66,20 +66,21 @@ class Carro:
         self._fabrica= fabrica
 
 
-class Motor:
+class Motor:#2
     def __init__(self,nome):
         self.nome= nome
 
 
-class Fabricante:
+class Fabricante:#3
     def __init__(self,nome):
         self.nome= nome
 
 Carro1=Carro('hb20')
 moto1=Motor('M1')
 fabri=Fabricante('Honda')
-Carro1.motor =moto1
-Carro1.fabrica= fabri
+
+Carro1.motor =moto1#4
+Carro1.fabrica= fabri#5
 
 Carro2=Carro('Corrola')
 Carro2.motor =moto1
