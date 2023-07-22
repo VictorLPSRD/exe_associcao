@@ -44,7 +44,7 @@ print(escritor.ferramenta.escrever())
 # Exiba o nome do carro, motor e fabricante na tela
 
 class Carro:
-    def __init__(self,nome):#1
+    def __init__(self,nome):
         self.nome = nome
         self._motor = None
         self._fabrica = None
@@ -66,27 +66,37 @@ class Carro:
         self._fabrica= fabrica
 
 
-class Motor:#2
+class Motor:
     def __init__(self,nome):
         self.nome= nome
 
 
-class Fabricante:#3
+class Fabricante:
     def __init__(self,nome):
         self.nome= nome
 
-Carro1=Carro('hb20')
-moto1=Motor('M1')
-fabri=Fabricante('Honda')
-
-Carro1.motor =moto1#4
-Carro1.fabrica= fabri#5
-
+#carro 1
+Carro1=Carro('hb20')#1
+moto1=Motor('M1')#2
+fabri=Fabricante('Honda')#4
+Carro1.motor =moto1#1 CONECTAR
+Carro1.fabrica= fabri
+#CARRO 2 COM OS MOTOR E FABRICA DO CARRO 1
 Carro2=Carro('Corrola')
 Carro2.motor =moto1
 Carro2.fabrica= fabri
+# CARRO3 
+Carro3= Carro('S10')
+moto2= Motor('motor s10')
+fabrica2 =Fabricante('chevorlet')
+Carro3.motor= moto2
+Carro3.fabrica= fabrica2
+
 
 
 print('Nome= ',Carro1.nome, " MOTOR= ", Carro1.motor.nome,' FABRICANTE=',Carro1.fabrica.nome)
 print()
 print('Nome= ',Carro2.nome, " MOTOR= ", Carro2.motor.nome,' FABRICANTE=',Carro2.fabrica.nome)
+print()
+print('Nome= ',Carro3.nome, " MOTOR= ", Carro3.motor.nome,' FABRICANTE=',Carro3.fabrica.nome)
+print()
